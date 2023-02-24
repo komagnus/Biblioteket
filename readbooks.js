@@ -7,6 +7,7 @@ function addItem() {
     var inputValue = input.value;
     if (inputs.includes(inputValue)) {
       alert("Boken er allerede i listen")
+      input.value = "";
     } else {
       inputs.push(inputValue)
       var li = document.createElement("li");
