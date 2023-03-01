@@ -3,6 +3,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 0;
 }
 #listWrapper {
     border: 1px solid black;
@@ -12,4 +13,97 @@ body {
 }
 #myBtn {
     display: none;
+}
+#banner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    background-color: #347e84;
+    margin-bottom: 20px;
+}
+.dropbtn {
+    background-color: #347e84;
+    border: none;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+    font-size: 40px;
+    height: fit-content;
+    width: 160px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    display: block;
+    right: 1;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {
+    background-color: #398188;
+}
+  .dropdown:hover .dropdown-content {
+    display: block;
+    cursor: pointer;
+}
+  .dropdown:hover .dropbtn {
+    background-color: #1f575c;
+    cursor: pointer;
+}
+#logo:hover{
+    cursor: pointer;
+}
+
+#info {
+    display: none;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    background-color: aliceblue;
+    align-self: center;
+    justify-self: center;
+    width: 60%;
+    height: auto;
+    justify-content: center;
+}
+#removeInfo {
+    right: 0;
+    top: 0;
+    position: absolute;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0px;
+    font-size: 20px;
+}
+
+#removeInfo:hover {
+    cursor: pointer;
+    background-color: red;
+}
+.images {
+    max-width: 250px;
+}
+#btn {
+    width: fit-content;
+    padding: 2px;
 }

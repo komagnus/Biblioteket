@@ -32,5 +32,15 @@ function addItem() {
     }
   });
   
+  function toggle() {
+    var x = document.getElementById("info");
+    
+    if (x.style.display === "none") {
+      x.style.display = "flex";
+    } else {
+      x.style.display = "none";
+    }
+  }
 
-
+//var myEle = document.getElementById("myElement");
+//if(myEle) { xxx}

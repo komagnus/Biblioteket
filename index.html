@@ -8,12 +8,42 @@
     <link rel="stylesheet" href="style.css">    
 </head>
 <body>
-    
+    <div id="banner">
+        <a href="https://www.hiof.no"><img href="" src="logo.png" alt="logo" id="logo"></a>
+        <div class="dropdown">
+            <button class="dropbtn">☰</button>
+            <div class="dropdown-content">
+              <a onclick="toggle()">Hvordan bruke siden</a>
+            </div>
+          </div>
+    </div>
+    <div id="info">
+        <p id="removeInfo" onclick="toggle()">✖</p>
+        <h1>Hvordan bruke siden:</h1>
+        <p>Øverst på siden er det et input-felt hvor man kan skrive inn eller scanne bøker. Scanning av bøker på plate/ av strekkode legger de automatisk til i listen, og manuell skriving + enter legger til feltets innhold i listen.
+            Dersom flere bøker legges på skanne-platen, blir alles UC-kode lagt til en gang i en liste i feltet under: 
+        </p>
+        <img class="images" src="Bilde1.png" alt="Illustrasjonsbilde">
+        <p> Dersom man forsøker å legge til en bok som allerede er scannet, blir det varslet:</p>
+        <img class="images" src="Bilde2.png" alt="Illustrasjonsbilde">
+        <p>Ved kopiering av verdien, blir det streket over hva som har blitt kopiert. Dette for å holde kontroll på hva som har blitt kassert:</p>
+        <img class="images" src="Bilde3.png" alt="Illustrasjonsbilde">
+        <p>Man kan tømme listen ved å enten trykke på «fjern liste» eller laste inn siden på nytt.
+             <br/>
+            Slik jeg har brukt det deles skjermen i to, og verdi kopieres inn i søkerfeltet:
+        </p>
+        <img class="images" src="Bilde4.png" alt="Illustrasjonsbilde">
+        <p>
+            <b>OBS!</b>bruk av denne siden kan føre til latterlig rask kassering. Forskning viser at bruk av denne metoden øker hurtigheten ved kassering til oppimot 5 bøker i minuttet!
+        </p>
+        <button id="btn" onclick="toggle()">OK</button>
+    </div>
     <input type="text" id="inputField" placeholder="Skriv UC her">
     <button id="myBtn"onclick="addItem()">Add</button>
     <div id="listWrapper">
         <ol id="list"></ol>
     </div>
+    
     <button id="refresh" onclick="window.location.reload()">Fjern liste</button>
     <script src="readbooks.js"></script>
 </body>
