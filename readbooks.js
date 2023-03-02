@@ -5,8 +5,11 @@ function addItem() {
     number++
     var input = document.getElementById("inputField");
     var inputValue = input.value;
+    var error = document.getElementById("errorText")
     if (inputs.includes(inputValue)) {
-      alert("Boken er allerede i listen")
+      error.innerHTML = "Uc-Id " + inputValue + " er allerede i listen"
+      error.style.display = "block"
+      setTimeout(function() {error.style.display = "none"}, 500)
       input.value = "";
     } else {
       inputs.push(inputValue)

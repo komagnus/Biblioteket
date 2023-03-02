@@ -107,3 +107,8 @@ body {
     width: fit-content;
     padding: 2px;
 }
+#errorText {
+  color: red;
+  font-size: medium;
+  display: none;
+}
