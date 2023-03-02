@@ -45,5 +45,27 @@ function addItem() {
     }
   }
 
+function kassere() {
+  
+  /* 
+  use api to get JSOn / xml of items return with that uc
+  /almaws/v1/bibs/{mms_id}/holdings
+  if(requested exists) {
+    add to list of requested items
+  } else {
+    use API to get items
+    /almaws/v1/bibs/{mms_id}/holdings/{holding_id}/items
+    for the item with UC code use API to withdraw item
+    /almaws/v1/bibs/{mms_id}/holdings/{holding_id}/items/{item_pid}
+    if (items array now === 0) {
+      delete records
+    } else {
+      continue
+    }
+  }
+  */
+
+}
+
 //var myEle = document.getElementById("myElement");
 //if(myEle) { xxx}
