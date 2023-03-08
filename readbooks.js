@@ -65,6 +65,26 @@ function kassere() {
   }
   */
 
+  /*
+
+  // Define the API endpoint URL
+const apiUrl = 'https://api-eu.hosted.exlibrisgroup.com/almaws/v1/bibs/{uc_id?}';
+
+// Send the API request using the Fetch API
+fetch(apiUrl, {
+  method: 'DELETE'
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('API request failed');
+    }
+    console.log('API response:', response.status);
+  })
+  .catch(error => {
+    console.error('API request failed:', error);
+  });
+  */
+
 }
 
 //var myEle = document.getElementById("myElement");
