@@ -45,8 +45,38 @@ function addItem() {
     }
   }
 
-function kassere() {
-  
+  const baseurl = 'https://api-eu.hosted.exlibrisgroup.com'
+  const getBookByUc = '/almaws/v1/items?item_barcode'
+  let ucInput;
+
+  function getBooks() {
+    fetch(baseurl + getBookByUc + ucInput)
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
+  }
+  function kassere() {
+    for (let i = 0; i < inputs.length; i++) {
+      ucInput = inputs[i]
+      getBooks();
+    }  
+
+  /*
+  POSTING:
+  fetch(baseurl + getBookByUc + ucInput, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: 'John Doe',
+    age: 30
+  })
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+  */
   /* 
   use api to get JSOn / xml of items return with that uc
   /almaws/v1/bibs/{mms_id}/holdings
