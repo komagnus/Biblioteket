@@ -45,6 +45,12 @@ function addItem() {
     }
   }
 
+  function clearList() {
+    document.getElementById("list").innerHTML = ''
+    inputs = []
+    console.log(inputs)
+  }
+/*
   const baseurl = 'https://api-eu.hosted.exlibrisgroup.com'
   const getBookByUc = '/almaws/v1/items?item_barcode'
   let ucInput;
@@ -55,31 +61,25 @@ function addItem() {
       .then(data => console.log(data))
       .catch(error => console.error(error));
   }
+  
   function kassere() {
     for (let i = 0; i < inputs.length; i++) {
       ucInput = inputs[i]
       getBooks();
     }  
+  const apiKey = 'your-api-key';
+  const apiUrl = 'https://api-eu.hosted.exlibrisgroup.com/almaws/v1/items?item_barcode={barcode}';
 
-  /*
-  POSTING:
-  fetch(baseurl + getBookByUc + ucInput, {
-  method: 'POST',
+fetch(apiUrl, {
   headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    name: 'John Doe',
-    age: 30
-  })
+    'Authorization': `Bearer ${apiKey}`
+  }
 })
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
-  */
-  /* 
-  use api to get JSOn / xml of items return with that uc
-  /almaws/v1/bibs/{mms_id}/holdings
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error(error));
+*/
+/*
   if(requested exists) {
     add to list of requested items
   } else {
@@ -93,9 +93,6 @@ function addItem() {
       continue
     }
   }
-  */
-
-  /*
 
   // Define the API endpoint URL
 const apiUrl = 'https://api-eu.hosted.exlibrisgroup.com/almaws/v1/bibs/{uc_id?}';
@@ -115,7 +112,5 @@ fetch(apiUrl, {
   });
   */
 
-}
 
-//var myEle = document.getElementById("myElement");
-//if(myEle) { xxx}
+
