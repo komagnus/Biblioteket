@@ -1,12 +1,12 @@
 let number = 0;
 let inputs = [];
-let counter = 0;
 
 function addItem() {
     number++
     var input = document.getElementById("inputField");
     var inputValue = input.value;
     var error = document.getElementById("errorText")
+    document.getElementById("counter").innerHTML = number;
     if (inputs.includes(inputValue)) {
       error.innerHTML = "Uc-Id " + inputValue + " er allerede i listen"
       error.style.display = "block"
@@ -14,8 +14,7 @@ function addItem() {
       input.value = "";
     } else {
       inputs.push(inputValue)
-      counter++;
-      document.getElementById("counter").innerHTML = counter;
+      
       var li = document.createElement("li");
       li.setAttribute('id', 'li' + number);
       var text = document.createTextNode(inputValue);
