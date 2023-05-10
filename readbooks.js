@@ -1,5 +1,6 @@
 let number = 0;
 let inputs = [];
+let counter = 0;
 
 function addItem() {
     number++
@@ -13,6 +14,8 @@ function addItem() {
       input.value = "";
     } else {
       inputs.push(inputValue)
+      counter++;
+      document.getElementById("counter").innerHTML = counter;
       var li = document.createElement("li");
       li.setAttribute('id', 'li' + number);
       var text = document.createTextNode(inputValue);
