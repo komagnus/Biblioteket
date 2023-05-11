@@ -6,7 +6,6 @@ function addItem() {
     var input = document.getElementById("inputField");
     var inputValue = input.value;
     var error = document.getElementById("errorText")
-    document.getElementById("counter").innerHTML = number;
     if (inputs.includes(inputValue)) {
       error.innerHTML = "Uc-Id " + inputValue + " er allerede i listen"
       error.style.display = "block"
@@ -14,7 +13,7 @@ function addItem() {
       input.value = "";
     } else {
       inputs.push(inputValue)
-      
+      document.getElementById("counter").innerHTML = number;
       var li = document.createElement("li");
       li.setAttribute('id', 'li' + number);
       var text = document.createTextNode(inputValue);
